@@ -1,22 +1,19 @@
-# 🍪 MF-GisMonitor
+# 风力发电机数字孪生大屏
 
-> 一个功能简单的GIS数据大屏案例
+## 依赖环境
 
-> 服务地址 :https://fengtianxi001.github.io/MF-GisMonitor
+> 推荐使用 node@20.19.2
 
-<h1 align="center">
-  <img src="./screenshot/screenshot.png" title="screenshot">
-</h1>
+## 项目启动
 
-## 项目说明
+> npm install
 
-- 目前项目功能较为简单, 后续将陆续更新更多的GIS功能
-
-
-
-## 更新日志
-
-##### v1.0.0
-
-- [x] 完成页面的响应式布局
-- [x] 完成地图的基本展示
+## 项目功能介绍
+- [x]  Threejs + Vue3 + Vite 架构。
+- [x] 风机glb模型 支持设备告警、设备分解合成。
+- [x] 添加进场动画。
+- [x] 优化设备的拆解和组装动画。
+- [x] 界面响应式布局，自适应。
+- [x] 新增设备的outline,鼠标拾取高亮。
+- [x] 代码简洁清晰，资源压缩、性能强劲。
+- [x] 参数监测、历史功率、日发电量监测、运行监测、故障对比、偏航角度监测。

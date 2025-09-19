@@ -1,0 +1,21 @@
+.leaflet-layer {
+  filter: grayscale(100) invert(100);
+}
+
+.leaflet-div-icon {
+  border: none !important;
+  background-color: transparent !important;
+}
+.arco-popover-popup-content {
+  background-color: #00000090 !important;
+  border-color: transparent !important;
+  backdrop-filter: blur(1px);
+  /* background-color: #1641798a !important;
+  border-color: transparent !important;
+  backdrop-filter: blur(2px); */
+}
+
+.arco-popover-popup-arrow {
+  background-color: #00000090 !important;
+  border-color: transparent !important;
+}
