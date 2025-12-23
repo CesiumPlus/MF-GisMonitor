@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { isFunction } from "lodash-es";
 import { createVNode, defineComponent, h, render } from "vue";
 import { WidgetMarker } from "@/components";
-
+import "leaflet.chinatmsproviders";
 function instantiateVueComponent(component: any, props: any) {
   const newComponent = defineComponent({ render: () => h(component, props) });
   const instance = createVNode(newComponent);
@@ -34,14 +34,28 @@ export function useLeaflet() {
   };
 
   const onBoostrapTile = () => {
-    const urls = {
-      amap: "https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}",
-      street: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      satellite:
-        "https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=6&x={x}&y={y}&z={z}",
-    };
-    tile.value = L.tileLayer(urls.amap);
-    map.value?.addLayer(tile.value);
+    map.value?.addLayer(
+      L.tileLayer.chinaProvider("GaoDe.Satellite.Map", {
+        maxZoom: 18,
+        minZoom: 4,
+      })
+    );
+
+    map.value.addLayer(
+      L.tileLayer.chinaProvider("GaoDe.Satellite.Annotion", {
+        maxZoom: 18,
+        minZoom: 4,
+      })
+    );
+
+    // const urls = {
+    //   amap: "https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}",
+    //   street: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    //   satellite:
+    //     "https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=6&x={x}&y={y}&z={z}",
+    // };
+    // tile.value = L.tileLayer(urls.amap);
+    // map.value?.addLayer(tile.value);
   };
 
   const onSetRegion = (geojson: any, style?: any) => {
