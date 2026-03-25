@@ -1,26 +1,29 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig({
-  base: './',
+  base: "./",
+  build: {
+    outDir: "./docs",
+  },
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler',
+        api: "modern-compiler",
       },
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: 1124,
     open: true,
   },
-})
+});
