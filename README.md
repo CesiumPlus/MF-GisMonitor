@@ -5,5 +5,5 @@
 > 服务地址 :https://fengtianxi001.github.io/MF-GisMonitor
 
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/fengtianxi001/MF-GisMonitor/main/screenshots/screenshot01.png" title="screenshot">
+  <img src="https://github.com/fengtianxi001/MF-GisMonitor/blob/master/screenshots/screenshot01.jpg?raw=true" title="screenshot">
 </h1>
