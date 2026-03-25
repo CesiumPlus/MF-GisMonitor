@@ -32,9 +32,9 @@ const toGCJ02 = (geojson: any) => {
 };
 onMounted(() => {
   Promise.all([
-    axios.get("https://geo.datav.aliyun.com/areas_v3/bound/530303.json"),
-    axios.get("/public/jsons/river.geojson"),
-    axios.get("/public/jsons/water.geojson"),
+    axios.get(`${import.meta.env.VITE_API_DOMAIN}/jsons/region.geojson`),
+    axios.get(`${import.meta.env.VITE_API_DOMAIN}/jsons/river.geojson`),
+    axios.get(`${import.meta.env.VITE_API_DOMAIN}/jsons/water.geojson`),
   ]).then(([region, river, water]) => {
     onSetRegion(toGCJ02(region.data));
     onAddJsonLayer(toGCJ02(water), {
