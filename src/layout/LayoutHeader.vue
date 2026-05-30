@@ -4,13 +4,6 @@
       <div class="cn">智慧水利水电工程</div>
       <div class="en">Large Wind Turbine Monitoring Platform</div>
     </div>
-    <div class="header-left">
-      <i class="fa-regular fa-envelope"></i>
-      <div
-        class="message"
-        content="【系统通知】更多优质项目，咸鱼搜索肛肠科冯主任"
-      ></div>
-    </div>
     <div class="header-right">
       <span>{{ state.time }}</span>
       <span>{{ state.date }}</span>
@@ -55,23 +48,28 @@ onUnmounted(() => {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 @keyframes text-roll {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
 }
+
 @keyframes light-go {
   from {
     left: 500px;
   }
+
   to {
     left: 1100px;
     opacity: 0;
   }
 }
+
 .layout-header {
   position: relative;
   display: flex;
@@ -82,6 +80,7 @@ onUnmounted(() => {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% 100%;
+
   &::after {
     position: absolute;
     bottom: -55px;
@@ -95,6 +94,7 @@ onUnmounted(() => {
     background-size: contain;
     animation: light-go 3s ease-in-out infinite forwards;
   }
+
   .header-midden {
     position: relative;
     display: flex;
@@ -105,16 +105,19 @@ onUnmounted(() => {
     overflow-x: hidden;
     font-family: DouyuFont;
     color: #fff;
+
     .cn {
       font-size: 30px;
       @include font-color;
     }
+
     .en {
       position: relative;
       font-size: 10px;
       @include font-color;
     }
   }
+
   .header-left {
     position: absolute;
     top: 20px;
@@ -124,11 +127,13 @@ onUnmounted(() => {
     align-items: center;
     font-size: 18px;
     color: #fff;
+
     .message {
       display: flex;
       width: 400px;
       overflow: hidden;
       font-size: 16px;
+
       &::after {
         width: auto;
         text-wrap: nowrap;
@@ -138,6 +143,7 @@ onUnmounted(() => {
       }
     }
   }
+
   .header-right {
     position: absolute;
     top: 20px;
@@ -146,12 +152,14 @@ onUnmounted(() => {
     grid-gap: 20px;
     font-size: 16px;
     color: #fff;
+
     span {
       position: relative;
       display: flex;
       align-items: center;
       text-shadow: 0 3px 2px #84a8f663;
       @include font-color;
+
       &:not(:last-child)::after {
         position: absolute;
         right: -10px;
